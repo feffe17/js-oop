@@ -23,3 +23,21 @@ cicla nell'array usando un forEach
 cicla nell'array usando un for
 crea una nuova array che contenga solo il nome dei veicoli
 crea una nuova array con solo i veicoli elettriche*/
+
+class Veicolo {
+    constructor(marca, anno, colore, porte, carburante) {
+      this.marca = marca;
+      this.anno = anno;
+      this.colore = colore;
+      this.porte = porte;
+      this.carburante = carburante;
+    }
+
+    calcolaEta() {
+        const annoCorrente = 2024;
+        return annoCorrente - this.anno;
+      }      
+    }
+
+    const autoUno = new Veicolo("fiat" , 2019 , "blu" , 3 , "benzina");
+    console.log(`Età del veicolo: ${autoUno.calcolaEta()} anni`);
